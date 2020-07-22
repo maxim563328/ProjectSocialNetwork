@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+
+    <title>TG - Авторизация</title>
+    <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body
+    style="background-color: #202020; display: flex; flex-direction: column; height: 100%; height: -webkit-fill-available;">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div class="card mt-5" style="background-color: #282828;">
+                        <div class="card-body justify-content-sm-center">
+                            <h5 style="color: aliceblue;">Авторизируйтесь</h5>
+                            <form action="/login" method="POST" class="form-contact">
+                                <div class="form-group">
+                                    <label for="email" style="color: aliceblue;">Введите свой e-mail:</label>
+                                    <input id="email" type="email" class="form-control" placeholder="E-mail" requied />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" style="color: aliceblue;">Введите свой пароль:</label>
+                                    <input id="password" type="password" class="form-control" placeholder="Пароль"
+                                        requied />
+                                </div>
+                                <button class="btn btn-outline-success">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
+    <footer class="footer">
+        <h4 class=" text-center"
+            style="color: 	#606060; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+            ©Copyright
+            AyaKa, чепочмек
+        </h4>
+        <p style="color: #606060;" class="text-center">Ни одно право не защищено</p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
