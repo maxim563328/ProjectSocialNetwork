@@ -39,9 +39,38 @@ def get_db():
     return g.link_db
 
 
+@app.route("/post/<int:id_post>")
+		def showPost:
+			db = get_db()
+			dbase = FDataBase(db)
+			title, post = dbase.getPost(id_post)
+			if not title:
+				abort(404)
+	
+	
+@app.route("/add_post")
+def add_post():
+	db = get_db()
+	dbase = FDataBase(db)
+	
+	if request.method == 'POST'
+		if len(request.form['name']) > 3 and len(request.form['post']) > 10:
+			res = dbase.addPost(request.form['name'], request.form['post'])
+			if not res:
+				flash('Ошибка добавления статьи', category = 'error')
+			else:
+				flash('Статья успешно добавлена', category = 'success')
+		else:
+			flash('Ошибка добавления, заголовок или статья слишко короткие', category = 'error')
+			
+	return render_template('add_post.html', title='Добавление статьи')
+	
+	
 @app.route("/")
 def index():
-    return render_template('index.html', title="TeamGames")
+	db = get_db()
+	dbase = FDataBase(db)
+	return render_template('index.html', title="TeamGames")
 
 
 @app.route("/login", methods=(["POST", "GET"]))
