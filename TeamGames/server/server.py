@@ -40,7 +40,7 @@ def get_db():
 
 
 @app.route("/post/<int:id_post>")
-		def showPost:
+		def showPost():
 			db = get_db()
 			dbase = FDataBase(db)
 			title, post = dbase.getPost(id_post)
@@ -53,7 +53,7 @@ def add_post():
 	db = get_db()
 	dbase = FDataBase(db)
 	
-	if request.method == 'POST'
+	if request.method == 'POST':
 		if len(request.form['name']) > 3 and len(request.form['post']) > 10:
 			res = dbase.addPost(request.form['name'], request.form['post'])
 			if not res:
