@@ -27,7 +27,7 @@
                     <div class="card mt-5" style="background-color: #282828;">
                         <div class="card-body justify-content-sm-center">
                             <h5 style="color: aliceblue;">Авторизируйтесь</h5>
-                            <form action="/login" method="POST" class="form-contact">
+                            <form action="/login" method="POST" class="form-contact" id="loginForm">
                                 <div class="form-group">
                                     <label for="email" style="color: aliceblue;">Введите свой e-mail:</label>
                                     <input id="email" type="email" class="form-control" placeholder="E-mail" requied />
@@ -37,7 +37,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Пароль"
                                         requied />
                                 </div>
-                                <button class="btn btn-outline-success">Войти</button>
+                                <button class="btn btn-outline-success g-recaptcha" data-sitekey="reCAPTCHA_6LcGv8gZAAAAAMDwILrNJg1Jc7QkhscCm7fxoLLf" id="log-in" data-callback='onSubmit' data-action='submit'>Войти</button>
                             </form>
                         </div>
                     </div>
@@ -54,8 +54,14 @@
         </h4>
         <p style="color: #606060;" class="text-center">Ни одно право не защищено</p>
     </footer>
+     <script>
+   function onSubmit(6LcGv8gZAAAAAMDwILrNJg1Jc7QkhscCm7fxoLLf) {
+     document.getElementById("loginForm").submit();
+   }
+ </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
